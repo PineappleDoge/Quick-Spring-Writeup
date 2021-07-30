@@ -1,0 +1,350 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title></title>
+        
+        <meta name="robots" content="noindex" />
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Introduction To Springs</a></li><li class="chapter-item expanded "><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Why Springs Over TweenService</a></li><li class="chapter-item expanded "><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> How Do Springs Work, Anyways</a></li><li class="chapter-item expanded "><a href="chapter_4.html"><strong aria-hidden="true">4.</strong> Open Sourced Spring Libraries</a></li><li class="chapter-item expanded "><a href="chapter_5.html"><strong aria-hidden="true">5.</strong> Flipper Example</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#introduction-to-springs" id="introduction-to-springs">Introduction to Springs</a></h1>
+<p>Springs are an extremely useful tool for designers everywhere. For any sort of movement that you'll like to animate, such as a player's camera or a UI set, springs can help bring an extra step of realism and appeal, by adding physics into how an object is animated. With a lot of adjustable properties, springs are a great way to animate objects with code. </p>
+<p>Major credits to Nanako and Fractality for their amazing resources on springs on Roblox, go check out their description about springs!</p>
+<ul>
+<li><a href="https://n-matsumooo.medium.com/creating-ui-in-roblox-with-springs-a636c2db8a2">Using Springs with UI by Nanako</a></li>
+<li><a href="https://devforum.roblox.com/t/spring-driven-motion-spr/714728">Spring Library by Fractality</a></li>
+</ul>
+<h2><a class="header" href="#implementation-of-springs-on-roblox" id="implementation-of-springs-on-roblox">Implementation Of Springs On Roblox</a></h2>
+<p>There's a lot of great, open-source libraries on Roblox, that handle the trouble of solving math and physic-related things in a nice, comfortable API for everyone to use! Some popular libraries are <code>Spring</code>, <code>Spr</code>, and <code>Flipper</code>. I personally use Spr and Flipper, but I strongly recommend you give each of these libraries a try, and mess around with them to see what your most comfortable with.</p>
+<h1><a class="header" href="#why-springs-why-not-tweenservice" id="why-springs-why-not-tweenservice">Why Springs? Why Not TweenService?</a></h1>
+<p>TweenService is a great way to animate objects, and for a lot of cases, it often gets the job done well and does what you need it to do. In certain scenerios however, TweenService shows it's flaws in two categories.</p>
+<ul>
+<li>
+<p><strong>Flexability.</strong> TweenService has a lot of great presets and solves a lot of common uses (EX: Enum.EasingStyle.Bounce), but what if you need finer control of your motion? A common, inefficient solution would be to have multiple tweens that'll simulate the bounce motion, but that'll often lead to code bloat, and make adjusting the tween diffucult later on.</p>
+</li>
+<li>
+<p><strong>Scalability.</strong> TweenService is a time-based animation method. As screen-sizes adjust, animating objects will look inconsistent between devices. 
+While all devices will take the same time to reach the same goal, varying screensizes might have tweens appear to be faster, while others are almost painfully slow to watch.</p>
+</li>
+</ul>
+<p>TweenService is a great tool, and I highly recommend not overcomplicating your code if TweenService works for you, but these issues can either be slight annoyances short-term, or cause major code bloat. With springs, you get a solution to both of these issues, while still maintaining pretty interpolation for whatever you desire to animate. </p>
+<h1><a class="header" href="#whats-the-method-behind-springs" id="whats-the-method-behind-springs">What's The Method Behind Springs?</a></h1>
+<p>With spring motion, fluid, flexible animations can be created with code in a predictable, flexable, and physically-accurate way. Springs can animate motion in three different ways, using <strong>Damping Ratio</strong> and <strong>Frequency</strong> as an adjustable base.</p>
+<p><strong>Damping ratio</strong></p>
+<ul>
+<li>Damping ratio &lt; 1 overshoots and converges on the target. This is called underdamping.</li>
+<li>Damping ratio = 1 converges on the target without overshooting. This is called critical damping.</li>
+<li>Damping ratio &gt; 1 converges on the target without overshooting, but slower. This is called overdamping.</li>
+</ul>
+<p><strong>Frequency</strong></p>
+<ul>
+<li>Frequency describes speed. Higher frequency will animate movement faster, while slower frequency will animate it slower.</li>
+<li>Generally, messing around between 0.5 &amp; 2 is a good range, but go crazy with how you change it</li>
+</ul>
+<p><em>Critical damping is recommended as the most visually neutral option. Underdamping is recommended for animations that need to “pop&quot;, and can be visualized as a bouncy motion. Overdamping can be visualized like a car slowing down to stop at a red light</em></p>
+<p>To visualize the motion of a spring, alongside see more of the math-side of how a spring works, <a href="https://www.desmos.com/calculator/rzvw27ljh9">check out this desmos link.</a></p>
+<h1><a class="header" href="#open-sourced-spring-libraries" id="open-sourced-spring-libraries">Open Sourced Spring Libraries</a></h1>
+<p>There's a lot of great, open-source spring libraries on Roblox, that handle the trouble of solving math and physics-related things in a nice, comfortable API for everyone to use! Some popular libraries are <code>Spring</code>, <code>Spr</code>, and <code>Flipper</code>. I personally use Spr and Flipper, but I strongly recommend you give each of these libraries a try, and mess around with them to see what your most comfortable with.</p>
+<ul>
+<li>Spring by Qwenty <a href="https://github.com/Quenty/NevermoreEngine/blob/version2/Modules/Shared/Physics/Spring.lua">Link</a></li>
+<li>Spr by Fractality <a href="https://devforum.roblox.com/t/spring-driven-motion-spr/714728">Link</a></li>
+<li>Flipper by Reselim <a href="https://github.com/Reselim/Flipper">Link</a></li>
+</ul>
+<p>Spr is probably the simpliest Spring module to understand out of this list. With a small API and out-of-the-box support for most of Roblox's datatypes, this one is the easiest to pick up and work with, even for non-programmers.</p>
+<p>Spring is also pretty simple, but with some more methods and properties for people who understand it. Not hard to work with, and has extra properties, so if you feel Spr is too simple, this works.</p>
+<p>Flipper is for users who wants lots of control over springs. With total control over the spring, and the ability to add multiple values, set goals, and read the values as they update, there's a lot of flexability with the values and how you can use them.</p>
+<h1><a class="header" href="#flipper-tutorial" id="flipper-tutorial">Flipper Tutorial</a></h1>
+<p><em>Note, Flipper is a lot like <a href="https://roblox.github.io/otter/">Roblox's Otter spring library</a>, so you can sort of use that as documentation.</em></p>
+<p><em>Example script taken from example page on <a href="https://github.com/Reselim/Flipper/blob/master/test/demo.client.lua">Flipper's Github</a></em></p>
+<pre><code class="language-lua">-------------------------------------------------------------
+-- Example Script For Flipper
+-------------------------------------------------------------
+-- Services + Player Setup
+local Players = game:GetService(&quot;Players&quot;)
+local ReplicatedStorage = game:GetService(&quot;ReplicatedStorage&quot;)
+local UserInputService = game:GetService(&quot;UserInputService&quot;)
+
+local LocalPlayer = Players.LocalPlayer
+local PlayerGui = localPlayer:FindFirstChildOfClass(&quot;PlayerGui&quot;)
+
+
+-------------------------------------------------------------
+-- Gui Creation
+local screenGui = Instance.new(&quot;ScreenGui&quot;)
+screenGui.Name = &quot;Example&quot;
+screenGui.Parent = playerGui
+
+local frame = Instance.new(&quot;Frame&quot;)
+frame.BackgroundColor3 = Color3.new(1, 1, 1)
+frame.BorderSizePixel = 2
+frame.BorderColor3 = Color3.new(1, 0, 0)
+frame.Size = UDim2.new(0, 40, 0, 40)
+frame.AnchorPoint = Vector2.new(0.5, 0.5)
+frame.Parent = screenGui
+
+
+-------------------------------------------------------------
+-- Flipper Setup
+local Flipper = require(ReplicatedStorage.Flipper)
+
+local SPRING_PROPERTIES = {
+	frequency = 3.5,
+	dampingRatio = 0.5,
+}
+
+local SpringMotor = Flipper.GroupMotor.new({
+	X = 0,
+	Y = 0,
+})
+
+SpringMotor:onStep(function(values)
+	frame.Position = UDim2.fromScale(values.X, values.Y)
+end)
+
+SpringMotor:onComplete(function()
+	print(&quot;Motor completed&quot;)
+end)
+
+UserInputService.InputChanged:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseMovement then
+		motor:setGoal({
+			X = Flipper.Spring.new(input.Position.X, SPRING_PROPERTIES),
+			Y = Flipper.Spring.new(input.Position.Y, SPRING_PROPERTIES),
+		})
+	end
+end)
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
